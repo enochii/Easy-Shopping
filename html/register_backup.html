@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米账号—注册</title>
+    <link rel="icon" href="../img/小米手机/logo-footer.png" type="image/gif">
+    
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/register.css">
+    
+
+</head>
+<body>
+<div class="entirety">
+    <!-- <div class="milogo">
+        <a href="/mi/index.html">
+        <img src="../img/小米手机/logo-footer.png"/>
+        </a>
+    </div> -->
+    
+    <div class="main1 main2">
+        <h3 class="tit-mi">注册 Easy Shopping 账号</h3>
+
+        <div id="register">
+            <div class="title">
+                <h2>欢迎注册</h2>
+            </div>
+            <div class="steps">
+                <ul class="clearfix">
+                    <li class="current">1. 填写注册信息</li>
+                    <li class="unpass">2. 注册成功</li>
+                </ul>
+            </div>
+            <form id="reForm" method="post" action="register_success.html" onsubmit="return false;">
+                <dl>
+                    <dt>用 户 名：</dt>
+                    <dd><input class="input-text" type="text" name="userName" onblur="check(this)"/></dd>
+                    <dt>密　　码：</dt>
+                    <dd><input class="input-text" type="password" name="password" /></dd>
+                    <dt>确认密码：</dt>
+                    <dd><input class="input-text" type="password" name="rePassword" /></dd>
+                    <dt>Email地址：</dt>
+                    <dd><input class="input-text" type="text" name="email" /></dd>
+                    <dt></dt>
+                    <dd class="button"><input class="input-reg" type="submit" name="register" value="" /></dd>
+                </dl>
+            </form>
+        </div>
+       
+        <br>
+        <div class="footer">
+            <p class="nf-intro"><a href="http://sse.tongji.edu.cn">Web系统与技术@Tongji SSE</a></p>
+            <p class="nf-intro"> Powered By <a href="https://github.com/hangshuaibi">Sch001</a> with love</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

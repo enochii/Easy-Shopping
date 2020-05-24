@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>小米商城</title>
+		<link rel="icon" href="img/小米手机/logo-footer.png" type="image/gif" >
+		<!-- <link rel="stylesheet" href="css/layui/css/layui.css"> -->
+		<link href="css/jyc.css" rel="stylesheet"  type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+
+		<!-- <script src="css/layui/layui.js"></script>
+
+		<script src="js/jquery-3.3.1.js"></script> -->
+		<script src="js/jyc.js"></script>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<!--头部-->
+	<div class="header">
+			<div class="topbar">
+				<div class="wrap">
+					<div class="topbar-left">
+						<a>小米商城</a><span >|</span>
+						<a>MIUI</a><span>|</span>
+						<a>loT</a><span>|</span>
+						<a>云服务</a><span>|</span>
+						<a>水滴</a><span>|</span>
+						<a>金融</a><span>|</span>
+						<a>有品</a><span>|</span>
+						<a>Select Region</a>
+					</div>
+					<div class="topbar-right">
+						<a href="html/login.html" id="login">登录</a><span>|</span>
+						<a href="html/miregister.html" id="register">注册</a><span>|</span>
+						<a href="html/like.html" id="dd">消息通知</a><span>|</span>
+						<div id="topbar-cart" >
+							<a  >
+								<i class="iconfont">&#xe600;</i>购物车</a>
+						</div>
+						<div class="loading" id="load" style="display:none">购物车中还没有商品，赶紧选购吧！</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="nav wrap">
+				<div class="nav-logo">
+					<a href="index.html"><img src="img/小米手机/logo-footer.png"></a>
+				</div>
+				<div class="header-nav">
+					<ul class="nav-list">
+						<li class="nav-category" id="nav-all" onmouseover="navallOver()" onmouseout="navallOut()">
+							<a>全部商品分类</a>
+						</li>
+						<li class="nav-item" id="phone">
+							<a>小米手机</a>
+							<div class="nav-bar-down" id="navbar1">
+								<div class="wrap">
+									<div>
+										<img class="firstimg" src="img/小米手机/mix2320-220.png"/>
+									</div>
+									<div>
+										<img src="img/小米手机/note2320x220.png"/>
+									</div>
+									<div>
+										<img src="img/小米手机/xm6-320.png"/>
+									</div>
+									<div>
+										<img src="img/小米手机/max2_toubu.png"/>
+									</div>
+									<div>
+										<img src="img/小米手机/5x-2!160x110.jpg"/>
+									</div>
+								</div>
+							</div>
+						</li>
+						
+
+						<li class="nav-item">
+							<a>服务</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="nav-search">
+					<form>
+						<input class="search-text" type="text">
+						<input class="iconfont search-btn " type="submit" value="&#xe7b7;">
+					</form>
+				</div>
+			</div>
+		</div>
+	<div class="clear"></div>
+		<!--主体-->
+	<div class="main">
+		<!--导航栏-->
+		<!-- <div class="home-hero-container wrap">
+			<div class="home-hero-sub">
+				<div class="span6">
+					<ul>
+						<li>
+							<a href="../mi/views/choose_phone.html">
+								<i class="iconfont"></i>
+								选购手机
+							</a>
+						</li>
+						<li>
+							<a>
+								<i class="iconfont"></i>
+								企业团购
+							</a>
+						</li>
+						<li>
+							<a>
+								<i class="iconfont"></i>
+								F码通道
+							</a>
+						</li>
+						<li>
+							<a>
+								<i class="iconfont"></i>
+								米粉卡
+							</a>
+						</li>
+						<li>
+							<a>
+								<i class="iconfont"></i>
+								以旧换新
+							</a>
+						</li>
+						<li>
+							<a>
+								<i class="iconfont"></i>
+								话费充值
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="row3">
+					<div>
+						<img src="img/index/span6-1.jpg"/>
+					</div>
+					<div>
+						<img src="img/index/span6-2.jpg"/>
+					</div>
+					<div>
+						<img src="img/index/span6-3.jpg"/>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- <div class="clear"></div> -->
+		
+
+
+     <div class="main-page">
+		<div class="wrap">
+
+			<div class="intelligence">
+				<div class="title">
+					<h2>智能</h2>
+				</div>
+				<div class="intelligence-more">
+					<span><a class="tab-active">热门</a><a>电视影音</a><a>电脑</a><a>家居</a></span>
+				</div>
+				<div class="clear"></div>
+				<div class="content">
+					<div class="box-8-left">
+						<img src="img/index/intelligence-left-1.jpg"/>
+						<img src="img/index/intelligence-left-2.jpg"/>
+					</div>
+					<div class="box-8">
+						<ul>
+							<li>
+								<div>
+									<img src="img/index/jiadian1.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<img src="img/index/jiadian1.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<img src="img/index/jiadian1.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<img src="img/index/jiadian1.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li class="down">
+								<div>
+									<img src="img/index/jiadian1.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li class="down">
+								<div>
+									<img src="img/index/jiadian1.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li class="down">
+								<div>
+									<img src="img/index/jiadian1.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li class="down">
+								<div>
+									<img src="img/index/jiadian1.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="collect-card">
+				<img src="img/index/collect-card-4.jpg"/>
+			</div>
+			<!-- <div class="collocation">
+				<div class="title">
+					<h2>搭配</h2>
+				</div>
+				<div class="collocation-more">
+					<span><a class="tab-active">热门</a><a>耳机音响</a><a>电源</a><a>电池储存卡</a></span>
+				</div>
+				<div class="clear"></div>
+				<div class="content">
+					<div class="box-8-left">
+						<img src="img/index/intelligence-left-1.jpg"/>
+						<img src="img/index/intelligence-left-2.jpg"/>
+					</div>
+					<div class="box-8">
+						<ul>
+							<li>
+								<div>
+									<img src="img/index/collocation1.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<img src="img/index/collocation2.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<img src="img/index/collocation3.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<img src="img/index/collocation4.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li class="down">
+								<div>
+									<img src="img/index/collocation5.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li class="down">
+								<div >
+									<img src="img/index/collocation6.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li class="down">
+								<div>
+									<img src="img/index/collocation7.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+							<li class="down">
+								<div>
+									<img src="img/index/collocation7.jpg"/>
+									<h3>小米电视4A 32英寸</h3>
+									<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+									<p class="price">999 元<del>1199元</del></p>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div> -->
+		</div>
+
+		<br>
+		<!--底部-->
+		<div class="clear"></div>
+		<div class="footer">
+				<div class="wrap">
+					<div class="footer-service">
+						<ul>
+							<li><a><i class="iconfont">&#xe715;</i>预约维修服务</a></li>
+							<li><a><i class="iconfont">&#xe67d;</i>7天无理由退货</a></li>
+							<li><a><i class="iconfont">&#xe639;</i>15天免费换货</a></li>
+							<li><a><i class="iconfont">&#xe608;</i>满150元包邮</a></li>
+							<li><a><i class="iconfont">&#xe613;</i>520余家售后网点</a></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+		<br><br>
+	</div>
+</body>
+</html>

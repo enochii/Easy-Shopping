@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账号-登录</title>
+    <link rel="SHORTCUT ICON" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/load.css">
+    <link rel="stylesheet" href="../css/base.css">
+
+    <script type="text/javascript" src="../js/const.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+</head>
+<body >
+<div class="h_panel">
+    <div class="h_logo">
+        <a href="../index.html" >Easy Shopping</a>
+    </div>
+</div>
+<!-- required pattern="[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}|^1[3578]\d{9}$|^[\u4e00-\u9fa5]{2,4}$" 
+    required pattern="^\w{6,10}$"
+-->
+<div class="bg">
+    <section id="secBody" >
+        <div class="innerBody cf">
+
+            <form id="loginForm" class="tableWrap fr" method="post" action="" onsubmit="return false;">
+                <div class="tableWrap-center">
+                <div class="tableTap cf">
+                    <h3 class="fl">账号登录</h3>
+                </div>
+
+                <div class="tableItem">
+                    <i class="userHead"></i>
+                    <input type="text" name="userName" placeholder="邮箱/手机/昵称" value="admin"/>
+                </div>
+                <div class="tableItem">
+                    <i class="userLock"></i>
+                    <input type="password" name="password" placeholder="密码" value="admin"/>
+                </div>
+                <div class="tableAuto cf">
+                    <a class="autoMatic fl" href="#"><input class="loadGiet"  type="checkbox"/>自动登录</a>
+                    <a class="autoMatic fl" href="#"><input class="loadGiet"  type="checkbox"/>记住密码</a>
+                    <a class="fr" href="#">忘记密码？</a>
+                </div>
+                <!--<button class="tableBtn">登录</button>-->
+                <input type="submit"  name="submit" class="tableBtn" value="登录"/>
+                <!-- <br><br> -->
+                <input type="button" onclick="location.href='./register.html'" class="tableBtn-green" value="注册新账号"/>
+                </div>
+            </form>
+
+        </div>
+        <!--</form>-->
+    </section>
+</div>
+<br>
+<div class="footer">
+    <p><a href="http://sse.tongji.edu.cn">Web系统与技术@Tongji SSE</a></p>
+    <p class="nf-intro"> Powered By <a href="https://github.com/hangshuaibi">Sch001</a> with love</p>
+</div>
+<script type="text/javascript">
+	window.addEventListener("load", handleSubmit);
+</script>
+
+</body>
+</html>
