@@ -23,7 +23,7 @@ a:hover{
     background-color: #333;
     color:#b0b0b0;
     line-height: 40px;
-    font-size:12px;
+    font-size:14px;
 }
 .topbar a{
     color:#b0b0b0;
@@ -353,6 +353,7 @@ a:hover{
 }
 .footer{
     background: #fff;
+    text-align: center;
 }
 .footer-service{
     padding: 27px 0;

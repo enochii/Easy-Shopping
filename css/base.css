@@ -18,6 +18,10 @@ img {
 	color:#999;
 	font-size:14px; 
 }
+
+.header {
+	font-size: large;
+}
 .fl { 
 	float: left; 
 }
