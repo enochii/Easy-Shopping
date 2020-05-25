@@ -1,0 +1,27 @@
+
+.footer{
+    background: #fff;
+    /* margin-top: auto; */
+}
+.footer-service{
+    margin-top: 6px;
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.footer-service ul{
+    margin:0 ;
+    padding:0;
+    height: 25px;
+}
+.footer-service li:first-child{
+    border-left:0;
+}
+.footer-service li{
+    float: left;
+    width:19.8%;
+    height: 25px;
+    border-left: 1px solid #e0e0e0;
+    font-size:16px;
+    line-height: 25px;
+    text-align: center;
+}

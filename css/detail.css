@@ -17,7 +17,7 @@ body{
     overflow:hidden;
 }
 
-.topbar{
+/* .topbar{
     height:40px;
     background-color: #333;
     color:#b0b0b0;
@@ -36,7 +36,7 @@ body{
 .topbar span{
     margin:0 .5em;
     color:#424242;
-}
+} */
 .nav-logo{
     float: left;
     margin-top:22px;
@@ -149,6 +149,7 @@ body{
 .price {
     line-height: 45px;
     margin: 17px 0 0;
+    margin-right: 20px;
     color: #ff6700;
     font-size: 12px;
     font-weight: bold;
@@ -168,13 +169,38 @@ body{
     margin-right: 80px;
 }
 
+.product-count .input-num {
+    text-align: center;
+}
+.product-count .input-num, .num-inc, .num-dec {
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+}
+
+.product-2 {
+    margin-bottom:40px;
+}
+
+.orderBtn, .purchaseBtn {
+	width: 130px;
+	height: 52px;
+	border: 0 none;
+	border-radius: 3px;
+	background: #ff6700;
+	font-size: 16px;
+	color: #FFF;
+	cursor: pointer;
+	text-shadow: 1px 1px 1px #ff7373;
+	font-family: "Microsoft YaHei";
+    line-height: 52px;
+    margin: 10px 10px 20px 0px;
+}
 
 .product-2 .desc{
     min-height: 30px;
     margin:3px 0 0 48px;
 }
-
-
 
 .product-2 .price{
     position: absolute;
@@ -223,125 +249,4 @@ body{
     position: relative;
     background: #f5f5f5;
     float:right;
-}
-
-
-
-.footer{
-    background: #fff;
-    /* margin-top: auto; */
-}
-.footer-service{
-    margin-top: 6px;
-    padding: 27px 0;
-    border-bottom: 1px solid #e0e0e0;
-}
-.footer-service ul{
-    margin:0 ;
-    padding:0;
-    height: 25px;
-}
-.footer-service li:first-child{
-    border-left:0;
-}
-.footer-service li{
-    float: left;
-    width:19.8%;
-    height: 25px;
-    border-left: 1px solid #e0e0e0;
-    font-size:16px;
-    line-height: 25px;
-    text-align: center;
-}
-.footer-links{
-    padding:40px 0;
-
-}
-.footer-links dl{
-    float:left;
-    width:160px;
-    height: 112px;
-    margin:0;
-}
-.footer-links dl dt{
-    margin:-1px 0 26px;
-    font-size:14px;
-    line-height: 1.25;
-    color:#424242;
-}
-.footer-links dl dd{
-    margin:10px 0 0;
-    font-size:12px;
-    color:#757575;
-}
-.footer-contact{
-    float:right;
-    width:251px;
-    height:112px;
-    border-left: 1px solid #e0e0e0;
-    text-align: center;
-    color:#616161
-}
-.footer-contact p{
-    margin:0 0 16px;
-    font-size:12px;
-}
-.footer-contact .phone{
-    margin:0 0 5px;
-    font-size:22px;
-    line-height: 1;
-    color:#ff6700
-}
-.footer-btn{
-    background: #fff;
-    color:#ff6700;
-    width: 118px;
-    height: 28px;
-    font-size:12px;
-    line-height: 28px;
-    border: 1px solid #ff6700;
-    display: inline-block;
-}
-.site-info{
-    padding:30px 0;
-    font-size:12px;
-    background: #fafafa;
-}
-.site-info .logo{
-    float:left;
-    width:57px;
-    height: 57px;
-    margin-right: 10px;
-}
-.site-text{
-    float:left;
-    color:#b0b0b0;
-}
-.site-text .sites{
-    margin:0;
-    line-height: 18px;
-}
-.site-text .sites a{
-    color:#757575;
-}
-.site-text a{
-    color:#b0b0b0;
-}
-.site-text span{
-    margin:0 .25em;
-}
-.site-links{
-    float:right;
-}
-.site-links img{
-    margin-left:0;
-    width:auto;
-    height: 28px;
-}
-.slogan{
-    clear:both;
-    margin:30px auto 0;
-    width:267px;
-    height:19px;
-    background:url("../img/slogan2016.png") no-repeat center 0;
 }
