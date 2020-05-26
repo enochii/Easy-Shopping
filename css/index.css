@@ -311,6 +311,7 @@
     margin-left:10px;
     padding-bottom: 5px;
 }
+
 .intelligence .box-8-left{
     width:234px;
     height: 614px;
@@ -441,52 +442,7 @@
 .parts .box-8 .down{
     margin-top:14px;
 }
-.periphery-more{
-    float: right;
-    padding:16px 0 0;
-    font-size:16px;
-}
-.periphery-more a{
-    margin-left:10px;
-    padding-bottom: 5px;
-}
-.periphery .box-8-left{
-    width:234px;
-    height: 614px;
-    float: left;
-}
-.periphery .box-8-left img{
 
-    width:234px;
-    height: 300px;
-}
-.periphery .box-8-left img:first-child{
-    margin-bottom: 14px;
-}
-.periphery .box-8 ul{
-    height: 614px;
-}
-.periphery .box-8 li{
-    float: left;
-    width:234px;
-    height: 260px;
-    background:#fff ;
-    margin-left:14px;
-    padding:20px 0;
-    transition:  all .2s linear;
-}
-.periphery .box-8 li:hover{
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    transform: translate3d(0, -5px, 0);
-}
-.periphery .box-8 li img{
-    width:160px;
-    height: 160px;
-    margin:0px 37px 18px 37px ;
-}
-.periphery .box-8 .down{
-    margin-top:14px;
-}
 .recommended .title .more {
     float: right;
     margin-top: 20px;
@@ -523,28 +479,4 @@
 .recommended .content img{
     height: 140px;
     width:140px;
-}
-.hot-product .content{
-    height: 415px;
-}
-.hot-product .content li{
-    margin-bottom: 14px;
-    height: 415px;
-    background-color: #fff;
-    text-align: center;
-    width:296px;
-    float: left;
-    margin-left: 14px;
-    transition:  all .2s linear;
-}
-.hot-product .content li:first-child{
-    margin-left: 0;
-}
-.hot-product .content li:hover{
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    transform: translate3d(0, -5px, 0);
-}
-.hot-product .content img{
-    height: 220px;
-    width:296px;
 }

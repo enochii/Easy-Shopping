@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的购物车</title>
+	<link rel="stylesheet" href="../css/common.css">
+    
+	<link rel="stylesheet" type="text/css" href="../css/cart.css">
+	
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/footer.css">
+ </head>
+<body>
+	<div class="header">
+		<div class="topbar">
+			<div class="wrap">
+				<div class="topbar-left">
+					<a>小米商城</a><span >|</span>
+					<a>MIUI</a><span>|</span>
+					<a>loT</a><span>|</span>
+					<a>云服务</a><span>|</span>
+					<a>水滴</a><span>|</span>
+					<a>金融</a><span>|</span>
+					<a>有品</a><span>|</span>
+					<a>Select Region</a>
+				</div>
+				<div class="topbar-right">
+					<a href="Account.html" id="login">登录</a><span>|</span>
+					<a href="miregister.html" id="register">注册</a><span>|</span>
+					<a href="#">消息通知</a><span>|</span>
+					<div id="topbar-cart" >
+						<a href="./like.html"><i class="iconfont">&#xe600;</i>购物车</a>
+					</div>
+					<div class="loading" id="load" style="display:none">购物车中还没有商品，赶紧选购吧！</div>
+				</div>
+			</div>
+		</div>
+		<div class="nav wrap">
+			<div class="nav-logo">
+				<a href="../index.html"><img src="../img/小米手机/logo-footer.png"></a>
+			</div>
+			<div class="header-nav">
+				<div class="nav-page-hint">
+					<span class="nav-page-name">我的购物车</span>
+					<span class="nav-page-words">如果您已经下单了，请尽快结账哦 😙！</span>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="main-page">
+		<div id="cart">
+			<div  ng-controller="cart"  class="container">
+				<div class="cart-box">
+					<div class="cart-goods-lists">
+						<div class="list-head">
+							<div class="col col-check">
+								<!-- <i id="selectAll" class="iconfont icon-checkbox icon-checkbox-selected">√</i> -->
+								<input class="check-box" type="checkbox" name="bookIds" value="true" />
+			
+							</div>
+							<div class="col place-holder">全选</div>
+							<div class="col col-img">&nbsp;</div>
+							<div class="col col-name">商品名称</div>
+							<div class="col col-price">单价</div>
+							<div class="col col-num">数量</div>
+							<div class="col col-total">小计</div>
+							<div class="col col-action">操作</div>
+						</div>
+						<div id="listBody" class="list-body">
+							<div class="item-box">
+								<div ng-repeat="product in product track by $index" class="item-table">
+									<div  class="item-row">
+										<div class="col col-check">
+											<input class="check-box" type="checkbox" name="bookIds" value="true" />
+										</div>
+										<div class="col place-holder">&nbsp;</div>
+										<div class="col col-img">
+											<a href=""><img style="width:80px;" src="../img/cart/1.jpg" alt=""></a>
+										</div>
+										<div class="col col-name">直流变频落地扇1X 白色</div>
+										<div class="col col-price">￥100.00</div>
+										<div class="col col-num">数量</div>
+										<div class="col col-total">小计</div>
+										<div class="col col-action">操作</div>
+									</div>
+								</div>
+							</div>
+						</div>					
+					</div>
+					<div class="cart-bar">
+						<span class="total-price">
+							合计（不含运费）：<p id="cartTotalPrice">xxx</p>元
+						</span>
+						<a href="" class="btn btn-a btn-primary ">去结算</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h1 class="nav-page-hint center">购买以上商品的用户还购买了</h1>
+		<HR class="recommand-spliter">
+		<div class="intelligence">
+			<div class="content">
+				<div class="box-8-left">
+					<img src="../img/index/intelligence-left-1.jpg"/>
+					<img src="../img/index/intelligence-left-2.jpg"/>
+				</div>
+				<div class="box-8">
+					<ul id="product-list">
+						<li>
+							<div>
+								<img src="../img/index/jiadian1.jpg"/>
+								<h3>小米电视4A 32英寸</h3>
+								<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+								<p class="price">999 元<del>1199元</del></p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../img/index/collocation1.jpg"/>
+								<h3>小米电视4A 32英寸</h3>
+								<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+								<p class="price">999 元<del>1199元</del></p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../img/index/collocation2.jpg"/>
+								<h3>小米电视4A 32英寸</h3>
+								<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+								<p class="price">999 元<del>1199元</del></p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="../img/index/collocation3.jpg"/>
+								<h3>小米电视4A 32英寸</h3>
+								<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+								<p class="price">999 元<del>1199元</del></p>
+							</div>
+						</li>
+						<li class="down">
+							<div>
+								<img src="../img/index/collect-card-4.jpg"/>
+								<h3>小米电视4A 32英寸</h3>
+								<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+								<p class="price">999 元<del>1199元</del></p>
+							</div>
+						</li>
+						<li class="down">
+							<div>
+								<img src="../img/index/collocation5.jpg"/>
+								<h3>小米电视4A 32英寸</h3>
+								<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+								<p class="price">999 元<del>1199元</del></p>
+							</div>
+						</li>
+						<li class="down">
+							<div>
+								<img src="../img/index/collocation6.jpg"/>
+								<h3>小米电视4A 32英寸</h3>
+								<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+								<p class="price">999 元<del>1199元</del></p>
+							</div>
+						</li>
+						<li class="down">
+							<div>
+								<img src="../img/index/collocation7.jpg"/>
+								<h3>小米电视4A 32英寸</h3>
+								<p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+								<p class="price">999 元<del>1199元</del></p>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-service">
+					<ul>
+						<li><a>预约维修服务</a></li>
+						<li><a>7天无理由退货</a></li>
+						<li><a>15天免费换货</a></li>
+						<li><a>满150元包邮</a></li>
+						<li><a>520余家售后网点</a></li>
+					</ul>
+				</div>
+				<br>
+				<p><a href="http://sse.tongji.edu.cn">Web系统与技术@Tongji SSE</a></p>
+				<p class="nf-intro"> Powered By <a href="https://github.com/hangshuaibi">Sch001</a> with love</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
