@@ -29,6 +29,8 @@ function requestTemplate(url, form, handleResponse, method  = 'POST') {
     console.log(formdata);
     // 发送的数据是由用户在表单中提供的
     request.send(formdata);
+    
+    console.log('send request');
     return request;
 }
 

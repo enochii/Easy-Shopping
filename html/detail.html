@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="../css/detail.css">
     <link rel="stylesheet" href="../css/footer.css">
 
+    <script type="text/javascript" src="../js/const.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/detail.js"></script>
+
 </head>
 <body>
 <!--头部-->
@@ -91,14 +95,16 @@
     <div class="wrap channel-title">
         <h2>商品详情</h2>
 
-        <div class="product-1 wrap shadow">
+        <div id="product-detail" class="product-1 wrap shadow">
             <!-- <div > -->
-                <img src="../img/智能%20家电/专区1.jpg" height="868" width="1000"/>
+                <span >
+                    <img id="product-picture" src="../img/智能%20家电/专区1.jpg"/>
+                </span>
                 <div class="content">
-                    <h1>米家扫地机器人</h1>
-                    <p class="desc"> 智能路径规划，大风压澎湃吸力，远程控制</p>
+                    <h1 id="product-name" >米家扫地机器人</h1>
+                    <p class="desc" id="product-desc"> 智能路径规划，大风压澎湃吸力，远程控制</p>
                     <p>
-                        <span class="price"><strong>1699</strong>元</span>
+                        <span class="price"><strong id="product-price">1699</strong>元</span>
                         <span class="product-count">
                             <button id="num-dec" class="num-dec">-</button>
                             <input type="text" class="input-num" id="test-id" value="0" />
@@ -108,9 +114,7 @@
                     <div><input type="submit"  name="submit" class="orderBtn" value="加入购物车"/>
                         <input type="submit"  name="submit" class="purchaseBtn" value="立即购买"/>
                     </div>
-                    <!-- <p class="link">了解产品></p> -->
                 </div>
-            <!-- </div> -->
         </div>
     </div>
 
@@ -160,5 +164,10 @@
     </div>
 
 </div>
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", function() {
+        loadDetail();
+    }, false);
+</script>
 </body>
 </html>

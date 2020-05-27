@@ -17,6 +17,10 @@ body{
     overflow:hidden;
 }
 
+#detail {
+    height: "868";
+    width: "1000";
+}
 /* .topbar{
     height:40px;
     background-color: #333;
