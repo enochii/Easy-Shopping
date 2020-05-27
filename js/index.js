@@ -19,7 +19,7 @@ function loadProductPage(page, urlpre) {
     // 数据成功发送
     request.addEventListener("load", function(event) {
         data = JSON.parse(event.target.responseText);
-        // todo: 把 token 存到 local storage
+        // 把 token 存到 local storage
         if(data.code == SUCCESS) {
             console.log('success');
             console.log(data.payload);
@@ -71,12 +71,20 @@ function product2tr(item, index) {
     var html = '';
 
     html += '<div>';
-    html += '<img src="'+item.picture+'"/>';
+    html += '<a href= "./html/detail.html">'
+
+    html += '<img src="'+item.picture+'" onclick="setProid(';
+    html += item.proid + ')"/></a>';
     html += '<h3>'+ item.name +'</h3>';
     // todo: 加一个简介
+    console.log(item);
     html += '<p class="decs">'+ item.desc+'</p>';
     html += '<p class="price"> ￥' + item.price + '</p>' 
 
     html += '</div>';
     return html;
+}
+
+function setProid(proid) {
+    localStorage.setItem('proid', proid);
 }

@@ -68,7 +68,7 @@ a:hover, a:active { color:#03F; text-decoration:underline; }
 #content .list th.nums { width:150px; }
 #content .list th.store { width:80px; }
 #content .list th.orderId { width:80px; }
-#content .list th.userName { width:80px; }
+#content .list th.username { width:80px; }
 #content .list th.price { width:80px; }
 #content .list th.createTime { width:140px; }
 #content .list th.status { width:80px; }

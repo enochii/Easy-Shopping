@@ -6,10 +6,12 @@
 		<link rel="icon" href="img/小米手机/logo-footer.png" type="image/gif" >
 		<!-- <link rel="stylesheet" type="text/css" href="css/base.css"> -->
 		<link href="css/common.css" rel="stylesheet"  type="text/css">
-		<!-- <link rel="stylesheet" type="text/css" href="css/iconfont.css"> -->
+		<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
 
 		<script src="js/const.js"></script>
 		<script src="js/index.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
 		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
@@ -29,7 +31,7 @@
 					</div>
 					<div class="topbar-right">
 						<a href="html/login.html" id="login">切换账号</a><span>|</span>
-						<a href="html/miregister.html" id="register">注册</a><span>|</span>
+						<a href="html/register.html" id="register">注册</a><span>|</span>
 						<a href="html/like.html" id="dd">消息通知</a><span>|</span>
 						<div id="topbar-cart" >
 							<a ><i class="iconfont">&#xe600;</i>购物车</a>
@@ -203,8 +205,14 @@
 	<script type="text/javascript">
 		const urlPrefix = HOST+"/products/page/";
 		window.addEventListener("DOMContentLoaded", function() {
-			// loadProductPage(1, urlPrefix);
+			loadProductPage(1, urlPrefix);
 		}, false);
+
+		if(!hasLogin()) {
+			// 未登录
+			alert('你还未登录哦！');
+			// do sth
+		}
 	</script>
 </body>
 </html>

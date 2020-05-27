@@ -8,48 +8,51 @@
     <link rel="stylesheet" href="../css/load.css">
     <link rel="stylesheet" href="../css/base.css">
     
+    <script type="text/javascript" src="../js/const.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
     <script type="text/javascript" src="../js/register.js"></script>
 </head>
 <body >
-<div class="h_panel">
-    <div class="h_logo">
-        <a href="../index.html" >Easy Shopping</a>
-    </div>
-</div>
-<div class="bg">
-    <section id="secBody" >
-        <div class="innerBody cf">
-
-            <form id="registerForm" method="POST" class="tableWrap fr">
-                <div class="tableWrap-center">
-                <div class="tableTap cf">
-                    <h3 class="fl">账号注册</h3>
-                </div>
-
-                <div class="tableItem">
-                    <input type="text" id="userName" placeholder="昵称" required="required" />
-                </div>
-                <div class="tableItem">
-                    <input type="password" name="password" placeholder="密码" required="required"/>
-                </div>
-                <div class="tableItem">
-                    <input type="text" id="userName" placeholder="邮箱" />
-                </div>
-                
-                <input type="submit" method="get" onclick="register();" class="tableBtn-green" value="注册"/>
-                <div class="tableAuto cf">
-                    <a href="#"><input class="loadGiet"  type="checkbox"/>我同意相关服务条款和隐私政策</a>
-                </div>
-                </div>
-            </div>
-
+    <div class="h_panel">
+        <div class="h_logo">
+            <a href="../index.html" >Easy Shopping</a>
         </div>
-    </section>
-</div>
-<br>
-<div class="footer">
-    <p><a href="http://sse.tongji.edu.cn">Web系统与技术@Tongji SSE</a></p>
-    <p class="nf-intro"> Powered By <a href="https://github.com/hangshuaibi">Sch001</a> with love</p>
-</div>
+    </div>
+    <div class="bg">
+        <section id="secBody" >
+            <div class="innerBody cf">
+
+                <form id="registerForm" method="" class="tableWrap fr">
+                    <div class="tableWrap-center">
+                    <div class="tableTap cf">
+                        <h3 class="fl">账号注册</h3>
+                    </div>
+
+                    <div class="tableItem">
+                        <input type="text" id="username" name="username" placeholder="昵称" required="required" />
+                    </div>
+                    <div class="tableItem">
+                        <input type="password" name="password" placeholder="密码" required="required"/>
+                    </div>
+                    <div class="tableItem">
+                        <input type="text" id="mail" name="mail" placeholder="邮箱" />
+                    </div>
+                    
+                    <input type="button" method="get" onclick="register();" class="tableBtn-green" value="注册"/>
+                    <div class="tableAuto cf">
+                        <a href="#"><input class="loadGiet"  type="checkbox" checked="checked"/>我同意相关服务条款和隐私政策</a>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <br>
+    <div class="footer">
+        <p><a href="http://sse.tongji.edu.cn">Web系统与技术@Tongji SSE</a></p>
+        <p class="nf-intro"> Powered By <a href="https://github.com/hangshuaibi">Sch001</a> with love</p>
+    </div>
 </body>
 
