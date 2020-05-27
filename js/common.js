@@ -2,6 +2,13 @@
 // 会返回一个 request 对象
 // 可以替换默认的 handler
 function requestTemplate(url, form, handleResponse, method  = 'POST') {
+    var formdata = new FormData(form);
+    requestWithFormData(url, formdata, handleResponse, method);
+}
+
+// 打个补丁
+// 有些 FormData 是手工构造的
+function requestWithFormData(url, formdata, handleResponse, method  = 'POST') {
     var request = new XMLHttpRequest();
     request.open(method, url);
     request.responseType = JSON_FORMAT;
@@ -25,7 +32,6 @@ function requestTemplate(url, form, handleResponse, method  = 'POST') {
         alert('something went wrong');
     });
 
-    var formdata = new FormData(form);
     console.log(formdata);
     // 发送的数据是由用户在表单中提供的
     request.send(formdata);

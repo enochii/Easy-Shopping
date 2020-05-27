@@ -31,11 +31,13 @@
                 <a>Select Region</a>
             </div>
             <div class="topbar-right">
-                <a href="Account.html" id="login">登录</a><span>|</span>
-                <a href="miregister.html" id="register">注册</a><span>|</span>
+                <a href="login.html" id="login">登录</a><span>|</span>
+                <a href="register.html" id="register">注册</a><span>|</span>
                 <a href="#">消息通知</a><span>|</span>
                 <div id="topbar-cart" >
-                    <a href="./like.html"><i class="iconfont">&#xe600;</i>购物车</a>
+                    <a href="cart.html">
+                        <!-- <i class="iconfont">&#xe600;</i> -->
+                        购物车</a>
                 </div>
                 <div class="loading" id="load" style="display:none">购物车中还没有商品，赶紧选购吧！</div>
             </div>
@@ -52,25 +54,6 @@
                 </li>
                 <li class="nav-item" id="phone">
                     <a>小米手机</a>
-                    <div class="nav-bar-down" id="navbar1">
-                        <div class="wrap">
-                            <div>
-                                <img class="firstimg" src="../img/小米手机/mix2320-220.png"/>
-                            </div>
-                            <div>
-                                <img src="../img/小米手机/note2320x220.png"/>
-                            </div>
-                            <div>
-                                <img src="../img/小米手机/xm6-320.png"/>
-                            </div>
-                            <div>
-                                <img src="../img/小米手机/max2_toubu.png"/>
-                            </div>
-                            <div>
-                                <img src="../img/小米手机/5x-2!160x110.jpg"/>
-                            </div>
-                        </div>
-                    </div>
                 </li>
                 <li class="nav-item">
                     <a>电视</a>
@@ -106,13 +89,13 @@
                     <p>
                         <span class="price"><strong id="product-price">1699</strong>元</span>
                         <span class="product-count">
-                            <button id="num-dec" class="num-dec">-</button>
-                            <input type="text" class="input-num" id="test-id" value="0" />
-                            <button id="num-inc" class="num-inc">+</button>
+                            <button id="num-dec" class="num-dec" onclick="decProNum()">-</button>
+                            <input type="text" class="input-num" id="product-num" value="1" />
+                            <button id="num-inc" class="num-inc" onclick="incProNum()">+</button>
                         </span>
                     </p>
-                    <div><input type="submit"  name="submit" class="orderBtn" value="加入购物车"/>
-                        <input type="submit"  name="submit" class="purchaseBtn" value="立即购买"/>
+                    <div "><input type="submit"  name="submit" class="orderBtn" value="加入购物车" onclick="newOrder()"/>
+                        <!-- <input type="submit"  name="submit" class="purchaseBtn" value="立即购买"/> -->
                     </div>
                 </div>
         </div>

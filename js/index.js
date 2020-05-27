@@ -38,7 +38,7 @@ function loadProductPage(page, urlpre) {
                 index ++;
                 var html = product2tr(item,index );
 
-                console.log(table.childNodes.length);
+                // console.log(table.childNodes.length);
                 var tr = document.createElement('li');
                 if(index > 4) tr.className = "down";
                 tr.innerHTML = html.trim();
@@ -77,7 +77,7 @@ function product2tr(item, index) {
     html += item.proid + ')"/></a>';
     html += '<h3>'+ item.name +'</h3>';
     // todo: 加一个简介
-    console.log(item);
+    // console.log(item);
     html += '<p class="decs">'+ item.desc+'</p>';
     html += '<p class="price"> ￥' + item.price + '</p>' 
 

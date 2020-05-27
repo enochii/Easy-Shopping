@@ -18,8 +18,13 @@ function handleSubmit() {
             
             console.log(data);
             // 把 token 存到 local storage
-            localStorage.setItem("token", data.payload.token);
-            window.location.href = '../index.html'
+            if(data.code == 1) {
+                localStorage.setItem("token", data.payload.token);
+                localStorage.setItem("userid", data.payload.userid);
+                window.location.href = '../index.html'
+            } else {
+                alert(data.msg)
+            }
         });
     
         // 失败

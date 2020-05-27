@@ -14,7 +14,8 @@ function registerSuccess(data_json) {
 
     payload = data_json.payload;
     console.log(payload);
-    localStorage.setItem('username', payload.username);
-    localStorage.setItem('password', payload.password);
+    // localStorage.setItem('username', payload.username);
+    // localStorage.setItem('password', payload.password);
+    localStorage.setItem('userid', payload.userid);
     location.href='./login.html';
 }
