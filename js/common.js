@@ -20,6 +20,7 @@ function requestWithFormData(url, formdata, handleResponse, method  = 'POST') {
 
     // 数据成功发送
     request.addEventListener("load", function(event) {
+        console.log(event.target.responseText);
         data = JSON.parse(event.target.responseText);
         
         console.log(data);
