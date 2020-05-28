@@ -90,13 +90,13 @@ p{
 .r-box-m-w{
     float:left;
 }
-.select{
+/* .select{
     float: right;
     background: url("../img/出行儿童/icon_user (1).png");
     width: 16px;
     height: 16px;
     margin: 11px 15px 0 12px;
-}
+} */
 
 .explain{
     margin-top: 10px;
@@ -188,17 +188,6 @@ input.word{
 }
 
 
-.select3{
-    width: 17px;
-    height: 17px;
-    margin-right: 5px;
-    margin-top: 0px;
-    display: inline-block;
-    vertical-align: middle;
-    background: url("../img/出行儿童/icon_user (1).png");
-    float: left;
-
-}
 
 .footer-1{
     text-align: center;

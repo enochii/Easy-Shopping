@@ -2,7 +2,7 @@
 /*内容部分*/
 #secBody {
 	padding-top: 0px;
-	background: url("../img/account_BG.jpg") no-repeat center;
+	background: url("../img/bg1.jpg") no-repeat center;
 	background-size:100% 588px;
 	padding-bottom: 30px;
 
@@ -55,7 +55,7 @@
 	width: 24px;
 	height: 24px;
 	display: inline-block;
-	background: url(../img/Router/userHead.png) no-repeat;
+	background: url(../img/login/userHead.png) no-repeat;
 	background-size: 100% 100%;
 	vertical-align: middle;
 }
@@ -63,7 +63,7 @@
 	width: 24px;
 	height: 24px;
 	display: inline-block;
-	background: url(../img/Router/lock.png) no-repeat;
+	background: url(../img/login/lock.png) no-repeat;
 	background-size: 100% 100%;
 	vertical-align: middle;
 }
@@ -137,52 +137,8 @@
 	height: 35px;
 
 }
-.loadType li:nth-of-type(1) a{
-	background: url(../img/Router/qqf.png) no-repeat;
-	background-size: 100% 100%;
-}
-/* .loadType li:nth-of-type(4) a{
-	background: url(../img/Router/wbf.png) no-repeat;
-	background-size: 100% 100%;
-}
-.loadType li:nth-of-type(3) a{
-	background: url(../img/Router/zhif.png) no-repeat;
-	background-size: 100% 100%;
-} */
-.loadType li:nth-of-type(2) a{
-	background: url(../img/Router/wxf.png) no-repeat;
-	background-size: 100% 100%;
-}
 
-.loadType li:nth-of-type(1):hover a{
-	background: url(../img/Router/qqt.png) no-repeat;
-	background-size: 100% 100%;
-}
-/* .loadType li:nth-of-type(4):hover a{
-	background: url(../img/Router/wbt.png) no-repeat;
-	background-size: 100% 100%;
-}
-.loadType li:nth-of-type(3):hover a{
-	background: url(../img/Router/zhit.png) no-repeat;
-	background-size: 100% 100%;
-} */
-.loadType li:nth-of-type(2):hover a{
-	background: url(../img/Router/wxt.png) no-repeat;
-	background-size: 100% 100%;
-}
 
-.loadMore i {
-	margin-left: 5px;
-	width: 18px;
-	height: 14px;
-	display: inline-block;
-	background: url(../img/Router/loadMore.png) no-repeat;
-	background-size: 100% 100%;
-	vertical-align: middle;
-}
-.loadType {
-
-}
 .typeWeb {
 	margin-top: 15px;
 	display: none;
@@ -193,15 +149,7 @@
 	line-height: 16px;
 	margin-bottom: 10px;
 }
-.typeWeb li i {
-	margin-right: 6px;
-	width: 16px;
-	height: 16px;
-	display: inline-block;
-	background: url(../img/Router/bdf.png) no-repeat;
-	background-size:  100% 100%;
-	vertical-align: middle;
-}
+
 .typeWeb li a {
 	color: #999;
 	vertical-align: middle;
