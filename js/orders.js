@@ -54,7 +54,7 @@ const ORDER_URL_PREFIX = HOST + '/orders/';
 function loadOrders() {
     if(!hasLogin()) {
         alert('你还没有登录哦，即将返回登陆界面');
-        window.location.href = '../html/login.js';
+        window.location.href = '../html/login.html';
     }
     var userid = localStorage.getItem('userid');
     url = ORDER_URL_PREFIX + userid;

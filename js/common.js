@@ -48,11 +48,14 @@ function hasLogin() {
 
 function localItemExist(key) {
     token = localStorage.getItem(key);
-    return typeof(token) != "undefined";
+    return !(token === null);
 }
 
 function logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('username');
+    
+    localStorage.setItem('userid', -1);
 }
 
 // 根据 local storage 填充用户名和密码
@@ -60,4 +63,21 @@ function fillUserInfo() {
     if(localItemExist('username')) {
         
     }
+}
+
+// 看用户有没有登录，更换导航栏的信息
+function welcome() {
+    if(hasLogin()) {
+        var msg = document.querySelector('#welcome-message');
+        msg.innerHTML = '来购物吧，' + localStorage.getItem('username');
+        //
+        var loginBtn = document.querySelector('#login');
+        loginBtn.innerHTML = '登出';
+        logout();
+        loginBtn.href = 'index.html';
+    }
+}
+
+function dump(key) {
+    console.log(localStorage.getItem(key))
 }

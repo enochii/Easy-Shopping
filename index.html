@@ -20,19 +20,13 @@
 			<div class="topbar">
 				<div class="wrap">
 					<div class="topbar-left">
-						<a>小米商城</a><span >|</span>
-						<a>MIUI</a><span>|</span>
-						<a>loT</a><span>|</span>
-						<a>云服务</a><span>|</span>
-						<a>水滴</a><span>|</span>
-						<a>金融</a><span>|</span>
-						<a>有品</a><span>|</span>
-						<a>Select Region</a>
+						<a id="easy-shopping">Easy Shopping</a><span >|</span>
+						<a id='welcome-message'>你还没登录哦(●'◡'●)></a><span>|</span>
 					</div>
 					<div class="topbar-right">
-						<a href="html/login.html" id="login">切换账号</a><span>|</span>
+						<a href="html/login.html" id="login">登录</a><span>|</span>
 						<a href="html/register.html" id="register">注册</a><span>|</span>
-						<a href="html/like.html" id="dd">消息通知</a><span>|</span>
+						<a href="html/orders.html" id="dd">我的订单</a><span>|</span>
 						<div id="topbar-cart" >
 							<a href="html/cart.html"><i class="iconfont">&#xe600;</i>购物车</a>
 						</div>
@@ -47,37 +41,11 @@
 					<a href="index.html"><img src="img/小米手机/logo-footer.png"></a>
 				</div>
 				<div class="header-nav">
-					<ul class="nav-list">
-						<li class="nav-category" id="nav-all" onmouseover="navallOver()" onmouseout="navallOut()">
-							<a>全部商品分类</a>
-						</li>
-						<li class="nav-item" id="phone">
-							<a>手机爆款</a>
-							<div class="nav-bar-down" id="navbar1">
-								<div class="wrap">
-									<div>
-										<img class="firstimg" src="img/小米手机/mix2320-220.png"/>
-									</div>
-									<div>
-										<img src="img/小米手机/note2320x220.png"/>
-									</div>
-									<div>
-										<img src="img/小米手机/xm6-320.png"/>
-									</div>
-									<div>
-										<img src="img/小米手机/max2_toubu.png"/>
-									</div>
-									<div>
-										<img src="img/小米手机/5x-2!160x110.jpg"/>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a>服务</a>
-						</li>
-					</ul>
-
+					<div class="nav-page-hint">
+						<span class="nav-page-name">Easy Sopping</span>
+						<span class="nav-page-words">世界其实触手可及！✊</span>
+					</div>
+					
 				</div>
 				<div class="nav-search">
 					<form>
@@ -98,9 +66,9 @@
 				<div class="title">
 					<h2>智能</h2>
 				</div>
-				<div class="intelligence-more">
+				<!-- <div class="intelligence-more">
 					<span><a class="tab-active">热门</a><a>电视影音</a><a>电脑</a><a>家居</a></span>
-				</div>
+				</div> -->
 				<div class="clear"></div>
 				<div class="content">
 					<div class="box-8-left">
@@ -189,11 +157,11 @@
 			<div class="wrap">
 				<div class="footer-service">
 					<ul>
-						<li><a><i class="iconfont">&#xe715;</i>预约维修服务</a></li>
-						<li><a><i class="iconfont">&#xe67d;</i>7天无理由退货</a></li>
-						<li><a><i class="iconfont">&#xe639;</i>15天免费换货</a></li>
-						<li><a><i class="iconfont">&#xe608;</i>满150元包邮</a></li>
-						<li><a><i class="iconfont">&#xe613;</i>520余家售后网点</a></li>
+						<li><a>三年保修服务</a></li>
+						<li><a>7天无理由退货</a></li>
+						<li><a>15天免费换货</a></li>
+						<li><a>满100元包邮</a></li>
+						<li><a>优质售后服务</a></li>
 					</ul>
 				</div>
 			</div>
@@ -206,11 +174,12 @@
 		const urlPrefix = HOST+"/products/page/";
 		window.addEventListener("DOMContentLoaded", function() {
 			loadProductPage(1, urlPrefix);
+			welcome();
 		}, false);
 
 		if(!hasLogin()) {
 			// 未登录
-			alert('你还未登录哦！');
+			console.log('你还未登录哦！');
 			// do sth
 		}
 	</script>

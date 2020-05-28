@@ -33,6 +33,10 @@ function incProNum() {
 function newOrder() {
     // proid | num | userid |
     // 准备数据
+    if(!hasLogin()) {
+        alert('你还没登录呢！');
+        return;
+    }
     proid = localStorage.getItem('proid');
     userid = localStorage.getItem('userid');
     var form = new FormData();
@@ -63,6 +67,7 @@ function loadDetail() {
         return;
     }
     var url = HOST + '/products/' + localStorage.getItem('proid');
+    getProInput().value = product_num;
     console.log(url);
     requestTemplate(url, undefined, detailSuccess, 'GET');
 }

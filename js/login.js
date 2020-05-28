@@ -21,6 +21,8 @@ function handleSubmit() {
             if(data.code == 1) {
                 localStorage.setItem("token", data.payload.token);
                 localStorage.setItem("userid", data.payload.userid);
+                localStorage.setItem("username", data.payload.username);
+
                 window.location.href = '../index.html'
             } else {
                 alert(data.msg)
