@@ -95,7 +95,7 @@ function product2tr(item, index) {
     var html = '';
 
     html += '<div>';
-    html += '<a href= "./html/detail.html">'
+    html += '<a href= "detail.html">'
 
     html += '<img src="'+item.picture+'" onclick="setProid(';
     html += item.proid + ')"/></a>';
