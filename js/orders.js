@@ -30,7 +30,7 @@ function order2item(order) {
     html += '<div class="col col-img">';
     html += '<a href=""><img style="width:80px;" src="';
     // todo : 考虑怎么整图片路径
-    html += "../"+order.picture;
+    html += order.picture;
     html += '" alt="产品缩略图"></a>';
     html += '</div>';
     html += '<div class="col col-name">';

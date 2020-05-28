@@ -89,6 +89,6 @@ function detailSuccess(data_json) {
     
     // todo: 加图片... 还得最终改成绝对路径
     // 在 const 里面改吧
-    document.querySelector('#product-picture').src = '../' + product.picture;
+    document.querySelector('#product-picture').src = product.picture;
     document.querySelector('#product-price').textContent = product.price;
 }
