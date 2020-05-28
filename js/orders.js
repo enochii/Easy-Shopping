@@ -21,22 +21,32 @@
 */
 
 function order2item(order) {
-    // console.log(order);
+    console.log(order);
     html = '';
     html += '<div class="item-table">';
     html += '<div  class="item-row">';
     html += '<div class="col col-check"></div>';
                     
     html += '<div class="col col-img">';
-    html += '<a href=""><img style="width:80px;" src="../img/cart/1.jpg" alt=""></a>';
+    html += '<a href=""><img style="width:80px;" src="';
+    // todo : 考虑怎么整图片路径
+    html += "../"+order.picture;
+    html += '" alt="产品缩略图"></a>';
     html += '</div>';
-    html += '<div class="col col-name">直流变频落地扇1X 白色</div>'
-    html += '<div class="col col-price">￥100.00</div>'
-    html += '<div class="col col-num">数量</div>'
-    html += '<div class="col col-total">小计</div>'
+    html += '<div class="col col-name">';
+    html += order.name;
+    html += '</div>';
+    html += '<div class="col col-price">￥';
+    html += order.price + '</div>';
+    html += '<div class="col col-num">';
+    html += order.num + '</div>';
+    html += '<div class="col col-total">￥';
+    html += (order.num * order.price) + '</div>';
     // html += '<div class="col col-time">5-25 12:08</div>'
-    html += '<div class="col col-state">未付款</div>'
-    html += '</div></div>'
+    html += '<div class="col col-state">'
+    html += (order.state == 0? '未付款':'已付款');
+    
+    html += '</div></div></div>'
     return html
 }
 

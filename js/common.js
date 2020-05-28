@@ -20,10 +20,10 @@ function requestWithFormData(url, formdata, handleResponse, method  = 'POST') {
 
     // 数据成功发送
     request.addEventListener("load", function(event) {
-        console.log(event.target.responseText);
+        // console.log(event.target.responseText);
         data = JSON.parse(event.target.responseText);
         
-        console.log(data);
+        // console.log(data);
         // 把 token 存到 local storage
         handleResponse(data);
     });
@@ -33,7 +33,7 @@ function requestWithFormData(url, formdata, handleResponse, method  = 'POST') {
         alert('something went wrong');
     });
 
-    console.log(formdata);
+    // console.log(formdata);
     // 发送的数据是由用户在表单中提供的
     request.send(formdata);
     

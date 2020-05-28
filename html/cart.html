@@ -9,6 +9,9 @@
 	
 	<link rel="stylesheet" href="../css/index.css">
 	<link rel="stylesheet" href="../css/footer.css">
+	<script type="text/javascript" src="../js/const.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/cart.js"></script>
  </head>
 <body>
 	<div class="header">
@@ -25,8 +28,8 @@
 					<a>Select Region</a>
 				</div>
 				<div class="topbar-right">
-					<a href="Account.html" id="login">登录</a><span>|</span>
-					<a href="miregister.html" id="register">注册</a><span>|</span>
+					<a href="login.html" id="login">登录</a><span>|</span>
+					<a href="register.html" id="register">注册</a><span>|</span>
 					<a href="#">消息通知</a><span>|</span>
 					<div id="topbar-cart" >
 						<a href="#"><i class="iconfont">&#xe600;</i>购物车</a>
@@ -60,7 +63,7 @@
 						<div class="list-head">
 							<div class="col col-check">
 								<!-- <i id="selectAll" class="iconfont icon-checkbox icon-checkbox-selected">√</i> -->
-								<input class="check-box" type="checkbox" name="bookIds" value="true" />
+								<input class="check-box" type="checkbox" id="selectAll" onchange="selectAllOnChange()"/>
 			
 							</div>
 							<div class="col place-holder">全选</div>
@@ -72,11 +75,11 @@
 							<div class="col col-action">操作</div>
 						</div>
 						<div id="listBody" class="list-body">
-							<div class="item-box">
-								<div ng-repeat="product in product track by $index" class="item-table">
-									<div  class="item-row">
+							<div class="item-box" id="box-1">
+								<div class="item-table">
+									<div  class="item-row" id='orderid'>
 										<div class="col col-check">
-											<input class="check-box" type="checkbox" name="bookIds" value="true" />
+											<input class="check-box" type="checkbox" name="bookIds" />
 										</div>
 										<div class="col place-holder">&nbsp;</div>
 										<div class="col col-img">
@@ -86,7 +89,7 @@
 										<div class="col col-price">￥100.00</div>
 										<div class="col col-num">数量</div>
 										<div class="col col-total">小计</div>
-										<div class="col col-action"><button>取消订单</button> </div>
+										<div class="col col-action"><button>移除</button> </div>
 									</div>
 								</div>
 							</div>
@@ -94,7 +97,7 @@
 					</div>
 					<div class="cart-bar">
 						<span class="total-price">
-							合计（不含运费）：<p id="cartTotalPrice">xxx</p>元
+							合计（不含运费）：<p id="cartTotalPrice">0</p>元
 						</span>
 						<a href="" class="btn btn-a btn-primary ">去结算</a>
 					</div>
@@ -198,5 +201,10 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		window.addEventListener("DOMContentLoaded", function() {
+			loadUnpaidOrders();
+		}, false);
+	</script>
 </body>
 </html>
