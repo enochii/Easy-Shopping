@@ -113,6 +113,7 @@ function setTotalPrice(val) {
     totalPriceItem.innerHTML = val;
 }
 
+// 对 item-box item-table item-row 均适用
 function getItemrowPrice(item) {
     ret = parseFloat(item.querySelector('.col-total').innerHTML.slice(1)); // skip ￥
     // console.log(ret);
@@ -121,7 +122,20 @@ function getItemrowPrice(item) {
 
 function removeUnpaidOrder(orderid) {
     // 发请求给后端请求删除
-    var itembox = document.querySelector('#box-'+orderid);
-    console.log(itembox);
-    itembox.parentNode.removeChild(itembox);
+    var url = HOST + '/orders/' + orderid;
+
+    function rmUnpaidSucc(data_json) {
+        if(data_json.code != 1) {
+            alert(data_json.msg);
+            return;
+        }
+        
+        var itembox = document.querySelector('#box-'+orderid);
+        changeTotalPrice(-getItemrowPrice(itembox));
+        // 这里
+        console.log('delete order');
+        itembox.parentNode.removeChild(itembox);
+    }
+
+    requestTemplate(url,undefined,rmUnpaidSucc,'DELETE');
 }
