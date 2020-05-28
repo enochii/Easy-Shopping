@@ -73,8 +73,8 @@ function welcome() {
         //
         var loginBtn = document.querySelector('#login');
         loginBtn.innerHTML = '登出';
-        logout();
-        loginBtn.href = 'index.html';
+        
+        loginBtn.href = window.location.href;
     }
 }
 
