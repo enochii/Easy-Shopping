@@ -3,6 +3,8 @@ var totalProduct = 0
 // 每页展示 8 个产品，做分页
 const productPerPage = 8
 
+const urlPrefix = HOST+"/products/page/";
+
 // index 页面的 products 列表
 var index_products = undefined;
 var index_purchase_cnt = undefined
@@ -24,7 +26,9 @@ function loadProductPage(page, urlpre) {
             console.log('success');
             console.log(data.payload);
             // append
-            pros = data.payload.products;
+            payload = data.payload;
+
+            pros = payload.products;
             // 全局对象赋值（index.js）
             index_products = pros
             index_purchase_cnt = Array(pros.length)
@@ -44,6 +48,26 @@ function loadProductPage(page, urlpre) {
                 tr.innerHTML = html.trim();
                 table.appendChild(tr)
             });
+            // 页面个数
+            console.log('total page ' + payload.total_page);
+            var totalPage = payload.total_page;
+            var pageList = document.querySelector('#page-list');
+            if(page > totalPage) {
+                alert('页面加载出了点小问题');
+                reutrn ;
+            }
+            pageList.innerHTML = ''; // 清空数据
+            for(i = 1; i<=totalPage; i++) {
+                // <a href="#">2</a>
+                var item = document.createElement('a');
+                item.href = '#';
+                
+                html = '<span onclick="loadProductPage(';
+                html += i + ', urlPrefix)">' + i + '</span>';
+                item.innerHTML = html;
+                pageList.appendChild(item);
+            }
+
         } else {
             console.log('something went wrong')
         }

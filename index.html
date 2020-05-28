@@ -7,12 +7,12 @@
 		<!-- <link rel="stylesheet" type="text/css" href="css/base.css"> -->
 		<link href="css/common.css" rel="stylesheet"  type="text/css">
 		<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+		<link rel="stylesheet" href="css/index.css">
 
 		<script src="js/const.js"></script>
 		<script src="js/index.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
 
-		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
 		<!--头部-->
@@ -145,7 +145,19 @@
 						</ul>
 					</div>
 				</div>
+				<div class="page-spliter">
+					<a href="#">&lt;</a> <a href="#">首页</a> 
+					<span id="page-list">
+						<a class="current" href="#">1</a>
+						<a href="#">2</a>
+						<!-- <span href="#">3</span> 
+						<span href="#">4</span>  -->
+						<a>...</a>
+					</span>
+					<a href="#">尾页</a> <a href="#">&gt;</a>
+				</div>
 			</div>
+			
 			<div class="collect-card">
 				<img src="img/index/collect-card-4.jpg"/>
 			</div>
@@ -171,7 +183,7 @@
 	</div>
 
 	<script type="text/javascript">
-		const urlPrefix = HOST+"/products/page/";
+		
 		window.addEventListener("DOMContentLoaded", function() {
 			loadProductPage(1, urlPrefix);
 			welcome();

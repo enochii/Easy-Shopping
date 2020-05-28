@@ -1,3 +1,16 @@
+/* 分页 */
+.page-spliter { 
+    text-align:center; 
+    font-size:17px; 
+    padding-top:60px;
+}
+.page-spliter * { margin:0 5px; }
+
+.page-spliter .current { 
+    font-weight:bold; 
+    border-bottom:1px solid #000; 
+}
+
 body{
     font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
     margin:auto;
