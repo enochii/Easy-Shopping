@@ -131,7 +131,9 @@ function removeUnpaidOrder(orderid) {
         }
         
         var itembox = document.querySelector('#box-'+orderid);
-        changeTotalPrice(-getItemrowPrice(itembox));
+
+        var cb = itembox.querySelector('.check-box');
+        if(cb.checked == true)changeTotalPrice(-getItemrowPrice(itembox));
         // 这里
         console.log('delete order');
         itembox.parentNode.removeChild(itembox);
