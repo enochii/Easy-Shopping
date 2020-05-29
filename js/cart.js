@@ -130,14 +130,53 @@ function removeUnpaidOrder(orderid) {
             return;
         }
         
-        var itembox = document.querySelector('#box-'+orderid);
-
-        var cb = itembox.querySelector('.check-box');
-        if(cb.checked == true)changeTotalPrice(-getItemrowPrice(itembox));
-        // 这里
-        console.log('delete order');
-        itembox.parentNode.removeChild(itembox);
+        rmOrder_FrontEnd(orderid);
     }
 
     requestTemplate(url,undefined,rmUnpaidSucc,'DELETE');
+}
+
+// 在前端删除 order item 
+function rmOrder_FrontEnd(orderid ){
+    var itembox = document.querySelector('#box-'+orderid);
+
+    var cb = itembox.querySelector('.check-box');
+    if(cb.checked == true)changeTotalPrice(-getItemrowPrice(itembox));
+    // 这里
+    console.log('delete order');
+    itembox.parentNode.removeChild(itembox);
+}
+
+function getAllOrderId() {
+    var children = document.querySelectorAll('.item-row');
+    console.log(children)
+
+    var orderids = []
+    children.forEach(element => {
+        var cb = element.querySelector('.check-box')
+        orderid = element.id.slice(6);
+        if(cb.checked) orderids.push(parseInt(orderid))
+    });
+
+    return orderids;
+}
+function payAll() {
+    var url = HOST + '/orders/pay';
+    orderids = getAllOrderId();
+    console.log(orderids);
+    
+    var formdata = new FormData();
+    formdata.append('orders', JSON.stringify(orderids));
+    requestWithFormData(url, formdata, removeCheckedOrders)
+
+    function removeCheckedOrders(data_json) {
+        if(data_json.code != 1) {
+            alert(data_json.msg);
+            return ;
+        }
+        //
+        orderids.forEach(id => {
+            rmOrder_FrontEnd(id);
+        });
+    }
 }

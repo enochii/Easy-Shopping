@@ -1,6 +1,6 @@
 
-// const HOST = 'http://127.0.0.1:5000'
-const HOST = 'http://47.98.247.28:5000'
+const HOST = 'http://127.0.0.1:5000'
+// const HOST = 'http://47.98.247.28:5000'
 
 const LOGIN_URL = HOST + '/login'
 
