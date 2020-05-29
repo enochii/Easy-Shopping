@@ -1,0 +1,12 @@
+.h_logo {
+    /* margin-top: 10px; */
+    /* width: 200px; */
+    height: 98px;
+    background: url(../img/logo-long.png) no-repeat;
+}
+
+.h_logo a {
+    display: block;
+    height: 98px;
+    text-indent: -9999em;
+}
