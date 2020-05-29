@@ -13,6 +13,7 @@ function decProNum() {
     var input_item = getProInput();
     if(input_item == null) console.log("该商品不存在")
 
+    if(input_item.value <= 1) return;
     input_item.value --;
     product_num = input_item.value;
     console.log(product_num);

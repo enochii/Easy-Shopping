@@ -163,6 +163,10 @@ function getAllOrderId() {
 function payAll() {
     var url = HOST + '/orders/pay';
     orderids = getAllOrderId();
+    if(orderids.length <= 0) {
+        alert('请选中商品再进行结算');
+        return;
+    }
     console.log(orderids);
     
     var formdata = new FormData();
