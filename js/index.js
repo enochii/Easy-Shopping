@@ -44,6 +44,7 @@ function loadProductPage(page, urlpre) {
 
                 // console.log(table.childNodes.length);
                 var tr = document.createElement('li');
+                tr.title = '点击图片查看详情🤭';
                 if(index > 4) tr.className = "down";
                 tr.innerHTML = html.trim();
                 table.appendChild(tr)
