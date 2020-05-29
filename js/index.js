@@ -56,6 +56,8 @@ function loadProductPage(page, urlpre) {
                 alert('页面加载出了点小问题');
                 reutrn ;
             }
+            // if (pageList === null) return ; // 推荐部分
+            // 分页逻辑
             pageList.innerHTML = ''; // 清空数据
             for(i = 1; i<=totalPage; i++) {
                 // <a href="#">2</a>
