@@ -86,7 +86,7 @@ function loadProductPage(page, urlpre) {
         <div>
             <img src="img/index/jiadian1.jpg"/>
             <h3>小米电视4A 32英寸</h3>
-            <p class="decs">64位四核处理器 / 1GB+4GB大内存</p>
+            <p class="index-pro-desc">64位四核处理器 / 1GB+4GB大内存</p>
             <p class="price">999 元<del>1199元</del></p>
         </div>
     </li>
@@ -102,7 +102,7 @@ function product2tr(item, index) {
     html += '<h3>'+ item.name +'</h3>';
     // todo: 加一个简介
     // console.log(item);
-    html += '<p class="decs">'+ item.desc+'</p>';
+    html += '<p class="index-pro-desc">'+ item.descr+'</p>';
     html += '<p class="price"> ￥' + item.price + '</p>' 
 
     html += '</div>';

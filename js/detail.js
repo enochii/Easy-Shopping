@@ -85,7 +85,7 @@ function detailSuccess(data_json) {
     name.textContent = product.name;
 
     product_stock = product.stock;
-    document.querySelector('#product-desc').textContent = product.desc;
+    document.querySelector('#product-desc').textContent = product.descr;
     
     // todo: 加图片... 还得最终改成绝对路径
     // 在 const 里面改吧

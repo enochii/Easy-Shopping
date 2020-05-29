@@ -23,7 +23,7 @@ function handleSubmit() {
                 localStorage.setItem("userid", data.payload.userid);
                 localStorage.setItem("username", data.payload.username);
 
-                window.location.href = '../index.html'
+                window.location.href = 'index.html'
             } else {
                 alert(data.msg)
             }
