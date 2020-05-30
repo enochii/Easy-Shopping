@@ -34,29 +34,47 @@ function incProNum() {
 function newOrder() {
     // proid | num | userid |
     // 准备数据
-    if(!hasLogin()) {
-        alert('你还没登录呢！');
-        return;
-    }
-    proid = localStorage.getItem('proid');
-    userid = localStorage.getItem('userid');
+    // if(!hasLogin()) {
+    //     alert('你还没登录呢！');
+    //     return;
+    // }
     var form = new FormData();
+    userid = localStorage.getItem('userid');
+    if (userid == -1) {
+        console.log(userid);
+
+        var uuid = get_uuid();
+        form.append('uuid', uuid);
+        console.log(uuid);
+    }
+
+    proid = localStorage.getItem('proid');
+    
     form.append('proid', proid);
     form.append('userid', userid);
     form.append('num', product_num);
 
     var url = HOST + '/orders';
+
+    function newOrderSucc(data_json) {
+        if(data_json.code != 1) {
+            alert('下单好像有问题');
+            return;
+        }
+        payload = data_json.payload;
+        console.log(payload);
+        if(payload.userid != userid) {
+            console.log('uuid update userid', userid);
+            localStorage.setItem('userid', payload.userid);
+            console.log(localStorage.getItem('userid'));
+        }
+    
+        alert('下单成功啦！你可以点右上角去购物车看看哦')
+    }
+
     requestWithFormData(url, form, newOrderSucc);
 }
 
-function newOrderSucc(data_json) {
-    if(data_json.code != 1) {
-        alert('下单好像有问题');
-        return;
-    }
-    console.log(data_json.payload);
-    alert('下单成功啦！你可以点右上角去购物车看看哦')
-}
 
 function payNow() {
 

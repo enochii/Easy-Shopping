@@ -52,6 +52,7 @@ function localItemExist(key) {
 }
 
 function logout() {
+    if(!hasLogin()) return;
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     
