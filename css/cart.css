@@ -1,4 +1,6 @@
-
+.item-row img {
+  width: 80px;
+}
 
 .recommand-spliter{
   border: 1 dashed #fff; 

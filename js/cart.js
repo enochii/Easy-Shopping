@@ -76,10 +76,11 @@ function unpaidOrder2item(order) {
     
     html += '<div class="col place-holder">&nbsp;</div>';
     html += '<div class="col col-img">';
-    html += '<a href=""><img style="width:80px;" src="';
-    // todo : 考虑怎么整图片路径
-    html += order.picture;
-    html += '" alt="产品缩略图"></a>';
+    // 点击图片跳转详情页
+    html += imgWithDetailLink(order.picture, order.proid);
+    // html += '<a href="detail.html"><img src="';
+    // html += order.picture;
+    // html += '" alt="产品缩略图"></a>';
     html += '</div>';
     html += '<div class="col col-name">';
     html += order.name;
@@ -186,5 +187,6 @@ function payAll() {
         orderids.forEach(id => {
             rmOrder_FrontEnd(id);
         });
+        alert('付款成功啦，你可以到订单界面查看订单状态哦(● ◡ ●)');
     }
 }

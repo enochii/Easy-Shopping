@@ -82,3 +82,17 @@ function welcome() {
 function dump(key) {
     console.log(localStorage.getItem(key))
 }
+
+// 点击图片会跳转到详情页
+function imgWithDetailLink(pic_url, proid) {
+    html = '<a href= "detail.html">'
+
+    html += '<img src="'+ pic_url+'" onclick="setProid(';
+    html += proid + ')" alt="产品缩略图"/></a>';
+    return html;
+}
+
+// 详情页展示需要 proid
+function setProid(proid) {
+    localStorage.setItem('proid', proid);
+}

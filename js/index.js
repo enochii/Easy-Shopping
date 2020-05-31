@@ -98,10 +98,11 @@ function product2tr(item, index) {
     var html = '';
 
     html += '<div>';
-    html += '<a href= "detail.html">'
+    // html += '<a href= "detail.html">'
 
-    html += '<img src="'+item.picture+'" onclick="setProid(';
-    html += item.proid + ')"/></a>';
+    // html += '<img src="'+item.picture+'" onclick="setProid(';
+    // html += item.proid + ')"/></a>';
+    html += imgWithDetailLink(item.picture, item.proid);
     html += '<h3>'+ item.name +'</h3>';
     // todo: 加一个简介
     // console.log(item);
@@ -110,8 +111,4 @@ function product2tr(item, index) {
 
     html += '</div>';
     return html;
-}
-
-function setProid(proid) {
-    localStorage.setItem('proid', proid);
 }
