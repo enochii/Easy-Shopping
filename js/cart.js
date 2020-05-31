@@ -161,6 +161,10 @@ function getAllOrderId() {
     return orderids;
 }
 function payAll() {
+    if(!hasLogin()) {
+        alert('请登录后再结算哦~ 😙');
+        return;
+    }
     var url = HOST + '/orders/pay';
     orderids = getAllOrderId();
     if(orderids.length <= 0) {
