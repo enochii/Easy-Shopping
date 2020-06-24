@@ -46,10 +46,29 @@ function order2item(order) {
     html += (order.num * order.price) + '</div>';
     // html += '<div class="col col-time">5-25 12:08</div>'
     html += '<div class="col col-state">'
-    html += (order.state == 0? '未付款':'已付款');
+    // html += (order.state == 0? '未付款':'已付款');
+    html += getStateString(order.state);
     
     html += '</div></div></div>'
     return html
+}
+
+function getStateString(state)
+{
+    // ORDER_IN_CART = 0;
+    ORDER_UNPAID = 1;
+    ORDER_PAID = 2;
+    ORDER_CANCELLED = 3;
+    switch(state)
+    {
+        case ORDER_PAID:
+            return '已付款';
+        case ORDER_CANCELLED:
+            return '已取消';
+        case ORDER_UNPAID:
+            return '未付款';
+        return '????';
+    }
 }
 
 const ORDER_URL_PREFIX = HOST + '/orders/';

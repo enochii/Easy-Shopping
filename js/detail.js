@@ -92,6 +92,7 @@ function loadDetail() {
 }
 
 function detailSuccess(data_json) {
+    console.log(data_json);
     // 错误处理也可以放在 requestTemplate 里面
     if(data_json.code != 1) {
         console.log('loading product detail fails ');

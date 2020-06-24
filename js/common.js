@@ -2,6 +2,7 @@
 // 会返回一个 request 对象
 // 可以替换默认的 handler
 function requestTemplate(url, form, handleResponse, method  = 'POST') {
+    console.log('request :', url);
     var formdata = new FormData(form);
     requestWithFormData(url, formdata, handleResponse, method);
 }

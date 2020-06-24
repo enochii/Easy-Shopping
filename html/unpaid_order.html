@@ -2,7 +2,7 @@
 <html ng-app="myApp" lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>我的购物车</title>
+	<title>未付款订单</title>
 	<link rel="stylesheet" href="../css/common.css">
     
 	<link rel="stylesheet" type="text/css" href="../css/cart.css">
@@ -12,7 +12,7 @@
 
 	<script type="text/javascript" src="../js/const.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
-    <script type="text/javascript" src="../js/cart.js"></script>
+    <script type="text/javascript" src="../js/unpaid_order.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
  </head>
 <body>
@@ -27,7 +27,7 @@
 					<a href="login.html" id="login" onclick="logout()">登录</a><span>|</span>
 					<a href="register.html" id="register">注册</a><span>|</span>
 					<a href="orders.html">我的订单</a><span>|</span>
-					<a href="unpaid_order.html">未付款订单</a><span>|</span>
+					<a href="cart.html">购物车</a><span>|</span>
 					<a href="index.html">首页</a><span>|</span>
 					
 					<div class="loading" id="load" style="display:none">购物车中还没有商品，赶紧选购吧！</div>
@@ -40,8 +40,8 @@
 			</div>
 			<div class="header-nav">
 				<div class="nav-page-hint">
-					<span class="nav-page-name">我的购物车</span>
-					<span class="nav-page-words">赶快下单吧 😙！</span>
+					<span class="nav-page-name">未付款订单</span>
+					<span class="nav-page-words">如果您已经下单了，请尽快结账哦 😙！</span>
 				</div>
 				
 			</div>
@@ -95,7 +95,7 @@
 						<span class="total-price">
 							合计（不含运费）：<p id="cartTotalPrice">0</p>元
 						</span>
-						<a class="btn btn-a btn-primary" onclick="payAll()">下单🦆~</a>
+						<a class="btn btn-a btn-primary" onclick="payAll()">去结算</a>
 					</div>
 				</div>
 			</div>

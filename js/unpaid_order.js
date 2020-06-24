@@ -1,11 +1,11 @@
-const CART_ORDER_URL_PREFIX = HOST + '/orders/incart/';
+const UNPAID_ORDER_URL_PREFIX = HOST + '/orders/unpaid/';
 function loadUnpaidOrders() {
     // if(!hasLogin()) {
     //     alert('你还没有登录哦，即将返回登陆界面');
     //     window.location.href = '../html/login.html';
     // }
     var userid = localStorage.getItem('userid');
-    url = CART_ORDER_URL_PREFIX + userid;
+    url = UNPAID_ORDER_URL_PREFIX + userid;
 
     requestTemplate(url, undefined, loadUnpaidOrderSucc, 'GET');
 }
@@ -16,7 +16,7 @@ function loadUnpaidOrderSucc(data_json) {
         return;
     }
     orders = data_json.payload.orders;
-    console.log(orders);
+    console.log('unpaid orders: ', orders);
 
     var table = document.querySelector('#listBody');
     table.textContent = '';//清空
@@ -96,7 +96,7 @@ function unpaidOrder2item(order) {
     html += '<div class="col col-action"><button '
     
     html += 'onclick="removeUnpaidOrder('+order.orderid+')"';
-    html += '>移除'
+    html += '>取消订单'
     
     html += '</button></div></div>';
     html += '</div>';
@@ -124,7 +124,7 @@ function getItemrowPrice(item) {
 
 function removeUnpaidOrder(orderid) {
     // 发请求给后端请求删除
-    var url = CART_ORDER_URL_PREFIX + 'del/' +orderid;
+    var url = UNPAID_ORDER_URL_PREFIX + 'del/' + orderid;
 
     function rmUnpaidSucc(data_json) {
         if(data_json.code != 1) {
@@ -135,7 +135,7 @@ function removeUnpaidOrder(orderid) {
         rmOrder_FrontEnd(orderid);
     }
 
-    requestTemplate(url,undefined,rmUnpaidSucc /*,'DELETE'*/);
+    requestTemplate(url,undefined,rmUnpaidSucc);
 }
 
 // 在前端删除 order item 
@@ -167,7 +167,7 @@ function payAll() {
         alert('请登录后再结算哦~ 😙');
         return;
     }
-    var url = CART_ORDER_URL_PREFIX + 'pay';
+    var url = UNPAID_ORDER_URL_PREFIX + '/pay';
     orderids = getAllOrderId();
     if(orderids.length <= 0) {
         alert('请选中商品再进行结算');

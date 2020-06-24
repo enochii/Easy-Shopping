@@ -33,7 +33,7 @@ function loadProductPage(page, urlpre) {
             index_products = pros
             index_purchase_cnt = Array(pros.length)
 
-            console.log(pros);
+            // console.log(pros);
             var table = document.querySelector("#product-list");
             // remove all children
             table.textContent = '';
@@ -73,6 +73,7 @@ function loadProductPage(page, urlpre) {
 
         } else {
             console.log('something went wrong')
+            console.log(data);
         }
     });
 
