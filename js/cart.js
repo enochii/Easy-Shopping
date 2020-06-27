@@ -188,6 +188,6 @@ function payAll() {
         orderids.forEach(id => {
             rmOrder_FrontEnd(id);
         });
-        alert('付款成功啦，你可以到订单界面查看订单状态哦(● ◡ ●)');
+        alert('下单成功啦，请尽早到未付款订单界面进行结算哦(● ◡ ●)');
     }
 }
